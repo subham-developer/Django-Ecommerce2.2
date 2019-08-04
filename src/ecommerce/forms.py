@@ -12,3 +12,9 @@ class Contact_form(forms.Form):
         if not "gmail.com" in email:
             raise forms.ValidationError("Email has to be gmail.com")
         return email
+
+
+
+class LoginForm(forms.Form):
+    LoginId = forms.CharField(widget=forms.TextInput(attrs={"class":"form-control","id":"loginId","placeholder":"Enter LoginId Here"}))
+    Password = forms.CharField(widget=forms.PasswordInput(attrs={"class":"form-control","placeholder":"Enter Password"}))
